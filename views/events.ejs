@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is the events page !</h1>
+    
+    <% for(let i=0; i<events.length; i++) {%>
+        <div>
+            <h3><%= events[i].name %></h3>
+            <span><%= events[i].type %></span>
+            <span><%= events[i].time %></span>
+            <a href="/events/<%= events[i]._id %>">Visit this event page</a>
+            <button class="delete" data-event-id="<%= events[i]._id %>">🚮</button>
+        </div>
+    <% } %>    
+    <script src="/main.js"></script>
+</body>
+<!-- </html> -->

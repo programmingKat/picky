@@ -8,36 +8,42 @@
 </head>
 
 <body>
-    <input type="text" placeholder="person name">
+    
 
-    <form action="">
+    <form action="/events/guest" method="POST">
+        <input type="text" value="<%=eventId%>" name="eventId" hidden>
+        <input type="text" placeholder="person name" name="guestName">
+        <fieldset>
+            <legend>Please check your dietary restrictions!</legend>
 
-        <input type="checkbox" name="dairyFree" id="dairyFree">
-        <label for="dairyFree">Dairy free</label>
-
-
-        <input type="checkbox" name="glutenFree" id="glutenFree">
-        <label for="glutenFree">Gluten free</label>
-
-
-        <input type="checkbox" name="vegeterian" id="vegeterian">
-        <label for="vegeterian">Vegeterian</label>
+            <input type="checkbox" name="dairyFree" id="dairyFree">
+            <label for="dairyFree">Dairy free</label>
 
 
-        <input type="checkbox" name="vegan" id="vegan">
-        <label for="vegan">Vegan</label>
+            <input type="checkbox" name="glutenFree" id="glutenFree">
+            <label for="glutenFree">Gluten free</label>
 
 
-        <input type="checkbox" name="pescatarian" id="pescatarian">
-        <label for="pescatarian">Pescatarian</label>
+            <input type="checkbox" name="vegeterian" id="vegeterian">
+            <label for="vegeterian">Vegeterian</label>
 
 
-        <input type="checkbox" name="halal" id="halal">
-        <label for="halal">Halal</label>
+            <input type="checkbox" name="vegan" id="vegan">
+            <label for="vegan">Vegan</label>
 
 
-        <input type="checkbox" name="kosher" id="">
-        <label for="kosher">Kosher</label>
+            <input type="checkbox" name="pescatarian" id="pescatarian">
+            <label for="pescatarian">Pescatarian</label>
+
+
+            <input type="checkbox" name="halal" id="halal">
+            <label for="halal">Halal</label>
+
+
+            <input type="checkbox" name="kosher" id="">
+            <label for="kosher">Kosher</label>
+        </fieldset>
+
 
         <fieldset>
             <legend>Can you come?</legend>
@@ -51,8 +57,10 @@
                 <label for="no">no</label>
             </div>
         </fieldset>
+
+        <input type="submit" value="RSVP">
     </form>
-    
+
 </body>
 
 </html>
