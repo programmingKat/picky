@@ -9,9 +9,9 @@
 
 <body>
     <h2>Create your Event</h2>
-    <form action="/events/create" method="POST">
-        <input type="text" placeholder="Event Name" name ="eventName">
-        <input type="date" name="eventDate">
+    <form action= "<%= event? `/event/${event._id}/edit` : '/events/create' %>" method="POST">
+        <input value="<%= event? event.name : '' %>" type="text" placeholder="Event Name" name ="eventName">
+        <input value="<%= event? event.date : '' %>" type="date" name="eventDate">
         <input type="time" name = "eventTime">
 
         <select name="eventType" id="eventType">

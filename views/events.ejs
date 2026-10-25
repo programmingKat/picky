@@ -15,6 +15,7 @@
             <span><%= events[i].time %></span>
             <a href="/events/<%= events[i]._id %>">Visit this event page</a>
             <button class="delete" data-event-id="<%= events[i]._id %>">🚮</button>
+            <button class="update" data-event-id="<%= events[i]._id %>">📝</button>
         </div>
     <% } %>    
     <script src="/main.js"></script>
