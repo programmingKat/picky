@@ -10,6 +10,9 @@ module.exports = function (app, db, ObjectId) {
         res.render('create-event.ejs');
     });
 
+    app.get('/events/:eventId/guest', function (req, res) {
+        res.render('guest.ejs');
+    });
 
     app.post('/events/create', async (req, res) => {
         const result = await db.collection('events').insertOne({
@@ -23,6 +26,7 @@ module.exports = function (app, db, ObjectId) {
         res.redirect(`/events/${result.insertedId}`,)
     })
 
+    //Michael said I have to put this last 
     app.get('/events/:eventId', async function (req, res) {
         let event = await db.collection('events').findOne({ _id: new ObjectId(req.params.eventId) })
         console.log(event)
