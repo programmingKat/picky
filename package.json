@@ -1,0 +1,27 @@
+{
+  "name": "picky",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/programmingKat/picky#readme",
+  "bugs": {
+    "url": "https://github.com/programmingKat/picky/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/programmingKat/picky.git"
+  },
+  "license": "ISC",
+  "author": "kat !",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js --watch"
+  },
+  "dependencies": {
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "mongodb": "^7.7.0",
+    "mongoose": "^9.11.4"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Picky</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h2>Create your Event</h2>
+    <form action="/events/create" method="POST">
+        <input type="text" placeholder="Event Name" name ="eventName">
+        <input type="date" name="eventDate">
+        <input type="time" name = "eventTime">
+
+        <select name="eventType" id="eventType">
+            <option value="">--Please choose an option--</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="brunch">Brunch</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="sweetTreat">Sweet Treat</option>
+        </select>
+
+        <input type="submit">
+    </form>
+</body>
+
+</html>
