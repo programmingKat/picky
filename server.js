@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient
 const { ObjectId, ServerApiVersion } = require('mongodb')
 
 let port = process.env.PORT || 3000;
-const uri = process.env.MONGODB_URI
+const uri = process.env.MONGODB_URI;
 //let configDB = require('./config/.env');
 let db
 
