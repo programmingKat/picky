@@ -4,9 +4,10 @@
 
 ## Result: An event-sharing app that allows you to invite friends to eat! - They can tell you their dietary restrictions. (: 
 
-* A two-player game where users take turns placing 🌲s and 🏕️s.
-* Displays a message in the DOM when a player wins.
-* Uses a camping-inspired green color scheme.
+* An event sharing / inviting app
+* Allows people to see shared dietary restrictions for a food outing
+* Each event creates a unique id that can be shared with friends - no sign-up required!.
+* Events can be updated or deleted
 
 
 ## How to Use
