@@ -1,16 +1,19 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const { ObjectId, ServerApiVersion } = require('mongodb')
 
 let port = process.env.PORT || 3000;
-let configDB = require('./config/.env');
+const uri = process.env.MONGODB_URI
+//let configDB = require('./config/.env');
 let db
 
 // config ~ connect to the database
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(configDB.url, {
+const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,
@@ -26,7 +29,7 @@ async function runStableAPIConnect() {
     console.log(
       'Pinged your deployment. You successfully connected to MongoDB!'
     );
-    db = client.db(configDB.dbName)
+    db = client.db(process.env.DBNAME)
     require('./app/routes.js')(app, db, ObjectId);
     return result;
 //   } 
