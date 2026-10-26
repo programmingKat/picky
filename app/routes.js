@@ -7,7 +7,7 @@ module.exports = function (app, db, ObjectId) {
     });
 
     app.get('/events/create', function (req, res) {
-        res.render('create-event.ejs');
+        res.render('create-event.ejs', {event: undefined});
     });
 
     app.get('/event/:eventId/edit', async function (req, res) {
