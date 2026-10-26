@@ -26,7 +26,6 @@
 
 *Edit the CSS - fix formatting  & make semantic adjustments to HTML
 * Add a reset
-* Track wins for each player
 * Display Guests who have rsvp'd on a event (id) page
 * Fix date string on the Event Page to be more descriptive
 * Add what the dietary restrictions are for that each event on it's event page!
